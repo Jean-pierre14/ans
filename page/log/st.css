@@ -1,0 +1,38 @@
+ body{
+      font-family: "segoe ui";
+      background-color: black;
+      padding: 100px 100px;
+    }
+    *{
+      color: white;
+      text-decoration: none;
+    }
+      .result{
+        font-size: 30px;
+        text-align: center;
+      }
+      .log{
+        padding: 40px;
+        background-color: green;
+        border-radius: 10px;
+        display: inline;
+        width: 100px;
+      }
+      .sign{
+        padding: 40px;
+        background-color: green;
+        border-radius: 10px;
+        display: inline;
+        width: 100px;
+        margin-left: 400px;
+      }
+      .links{
+        margin-top: 200px;
+        padding: 50px 200px;
+      }
+      .welcome{
+          font-size: 20px;text-align: center;
+        }
+    a {
+      text-decoration: underline;
+    }

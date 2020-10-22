@@ -1,0 +1,1 @@
+CREATE TABLE `web_fat_db`.`register` ( `id` INT NOT NULL AUTO_INCREMENT , `type_of_bisiness` VARCHAR(255) NOT NULL , `bisiness_name` VARCHAR(255) NOT NULL , `latitude` VARCHAR(255) NOT NULL , `longitude` VARCHAR(255) NOT NULL , `about_the_business` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;

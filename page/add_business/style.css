@@ -1,0 +1,120 @@
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+	  body{color: white;font-family: 'Trebuchet MS', Arial, sans-serif;}
+    .my_body{ top:0; bottom:0; width: 100%; background-color: rgba(0,0,0,0.6); }
+     
+    .body{margin-top: 0px;height: 850px;background: url('business_pic/Tools-and-Tips-for-Outbound-Sales-Prospecting.jpg') repeat-x bottom;position: relative;;background-size: cover; margin-top: 0px; margin-bottom: -40px}
+      #map{height: 500px;width: 100%;}
+     
+       section h1, nav a{font-family: Dayrom, serif;font-weight: normal;text-transform: uppercase;}
+       /* Navigation */
+      .nav{display: inline-block;width: 100%;background-color: transparent; position: absolute;top: 50px;
+        right: 10px;font-size:30px;text-align:left;color:#37272E;}
+      .nav ul{list-style-type: none; position: relative; margin-top: 100px;position: absolute;
+        top: 50px;right: 30px;}
+      /*.nav li{display: inline-block;}*/
+      .nav a{font-size: 3em;color: #181818;padding: 4px;margin: 50px;text-decoration: none;color: #C68964;}
+      .nav a i {
+        color: #181818;
+        transition: all ease 0.3s;
+      }
+      .nav a:hover i{
+        color: #fff;
+      }
+
+      .nav a:hover{color: #fff;border-bottom: 3px solid #760001;
+        background: #CB8F6A; border-radius: 5PX;transition: 0.5s;}
+      .nav-o{
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 200px;
+        background: rgba(255,255,255,.3);
+        padding: 10px;
+        color: white;
+      }
+      .nav-o ul{
+        position: relative;
+      }
+      .nav-o ul li{
+        width: 100%;
+        height: 50px;
+        display: block;
+
+        position: relative;
+        margin-bottom: 10px;
+      }
+      .nav-o ul li a{
+        display: block;
+        color: #123F78;
+        font-size: 2.5rem;
+        padding: 10px;
+        margin: 10px;
+      }
+      .nav-o a:hover{
+        color: #fff;
+        background: rgb(119, 156, 204);
+      }
+      .header2{background-color: #9B9EAD;text-shadow: 2px 2px 15px white;}
+      .header1{margin-left: 10px;color: black;position: relative;}
+        button{margin-top: 2px;margin-bottom: 2px;background-color: #DDC472; border: 1px solid black;
+        padding: 5px; border-radius: 5px; cursor: pointer; color: black;}
+    button:hover{background-color: black; color: white; transition: .5s; cursor: pointer;}
+      
+      @media screen and (max-width: 1085px){
+  .nav{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px){
+  .nav{
+    width: 100%;
+  }
+}
+.animation{
+  position: relative;
+  animation: text-slide linear infinite 3s;
+}
+@keyframes text-slide {
+  0%{text-shadow: -10px 5px 15px rgb(52, 212, 151);}
+  10%{text-shadow: 10px 9px 5px rgb(99, 209, 49);}
+  50%{text-shadow: 7px 8px 5px rgb(191, 221, 84);}
+  100%{text-shadow: 8px -4px 10px rgb(74, 102, 194);}
+}
+input[type=text],
+            input[type=email],
+            input[type=number]{
+                width: 103%;
+                padding: 10px;
+                margin: 1px;
+                border: 1px solid #fff;
+                border-radius: 5px;
+                font-family: 'Comic Sans MS';
+                font-size: medium;
+            }
+            textarea{
+                outline: none;
+                font-family: 'Comic Sans MS';
+                font-size: medium;
+            }
+            input[type=submit],
+            input[type=reset]{
+                border: none;
+                margin-left: 5px
+            }
+            input[type=submit]{
+                background: #00506A;
+            }
+            input[type=reset]{
+                background: #9C735A;
+            }
+             *
+            {
+                margin: 0;
+                padding: 0;
+            }
+            #input, select, textarea{width: 100%; border-radius: 5px; padding: 15px;border: 1px solid #fff;}#aa{width: 100%;padding: 5px;}
+            body{background-image: url('../transport_pic/background_2.jpg'); background-size: cover;color: black;}
+            .body{ top:0; bottom:0; width: 100%; height: 705px ; background-color: rgba(0,0,0,0.3); }

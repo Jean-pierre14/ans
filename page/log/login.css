@@ -1,0 +1,246 @@
+body{
+      background-color: #202026;
+      font-family: calibri;
+}
+*{
+  color: white;
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+}
+.sidebar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  margin: 0px;
+  border-right: 2px solid #17171E;
+}
+
+.label1{
+  font-size: 14px;
+    color: #696F79;
+  display: block;
+  font-family: "arial";
+  text-align: center;
+}
+.start_coding{
+  text-align: center;
+  padding: 10px;
+  border: 2px solid transparent;
+   border-image: linear-gradient(-90deg, #47CF73, #FFBF00,#BA81BD,#4C99F2);
+   border-image-slice: 1;
+   margin-left: 20px;
+   margin-right: 20px;
+  display: block;
+}
+.side1{
+  padding: 0px 20px 0px 20px;
+}
+.side1 img{
+  padding-top: 20px;
+  position: relative;
+  left: 20px;
+}
+.side2{
+  margin-top: 10px;
+}
+.side2 span{
+  font-size: 15px;
+  margin-left: 20px;
+}
+.side21{
+  padding: 0px;
+  margin-bottom: 10px;
+}
+.side21 span{
+  color: #FFBF00;
+}
+.side2 .ul{
+  padding-left: 20px;
+  font-size: 18px;
+}
+.side2 .ul:hover{
+  background-color: black;
+}
+
+.side3 div{
+  color: #696F79;
+  font-size: 18px;
+  padding-left: 20px;
+}
+.side3 div:hover{
+  background-color: black;
+}
+.side4{
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.side5 div{
+  font-size: 15px;
+  margin: 0px 20px 0px 20px;
+  color: #696F79;
+}
+.side5 div:hover{
+  color:white;
+}
+.log{
+  position: absolute;
+  left: 255px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin: 0px;
+}
+.log1{
+  margin-top: 50px;
+  margin-left: 130px;
+  width: 370px;
+  font-family: "segoe ui";
+}
+.label2{
+  font-weight: bold;
+  font-size: 60px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.label3{
+  color: #696F79;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.textbox{
+  border: none;
+  height: 50px;
+  width: 350px;
+  border-radius: 5px;
+  background-color: #D5D7DE;
+  padding-left: 20px;
+  color: black;
+}
+input[type=submit]{
+  display: block;
+  width: 370px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-family: "segoe ui";
+  color: black;
+  margin-top: 20px;
+  background-color: #47CF73;
+  cursor: pointer;
+}
+
+input[type=submit]:hover{
+  background-color: #26BE62;
+}
+.label4{
+  margin-top: 30px;
+  color: #0EBEFF;
+  text-align: center;
+}
+.label4:hover{
+  text-decoration: underline;
+}
+.log2{
+  position: absolute;
+  left: 620px;
+  right: 175px;
+  top: 200px;
+  padding-left: 10px;
+  padding-top: 20px;
+  bottom: 150px;
+}
+.social1{
+  background-color: #60B5F0;
+  border-radius: 5px;
+  height: 50px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+.social2{
+  background-color: #868CA0;
+  border-radius: 5px;
+  height: 50px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+.social3{
+  background-color: #4464A2;
+  border-radius: 5px;
+  height: 50px;
+  width: 300px;
+  margin-bottom: 10px;
+}
+.social1:hover{
+  background-color: #50A4E0;
+}
+.social2:hover{
+  background-color: #757B90;
+}
+.social3:hover{
+  background-color: #335391;
+}
+.label5{
+  display: inline;
+ /* height: 50px;*/
+  line-height: 50px;
+}
+.sociallogo{
+  float: left;
+  margin: 10px;
+}
+.log3{
+  position: absolute;
+  left: 130px;
+  top: 570px;
+  right: 175px;
+  font-family: "segoe ui";
+  border-radius: 5px;
+  background-color: #2C303A;
+  border: none;
+  height: 50px;
+}
+.label6{
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+.log4{
+  position: absolute;
+  left: 770px;
+  right: 495px;
+  height: 320px;
+  top: 220px;
+}
+.line1{
+  margin-left: 50px;
+  height: 130px;
+  border-left: 2px solid #696F79;
+}
+.label7{
+  padding: 20px;
+  border: 2px solid #696F79;
+  border-radius: 10px
+  /*margin: 0px 20px;
+  text-align: center;
+  color: #696F79;*/
+}
+.lab{
+
+  color: rgb(255,0,0);
+text-decoration: underline;
+}
+.alert{
+  position: relative;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+
+  box-shadow: 2px 5px 10px rgba(0,0,0,0.4);
+  border-radius: 4px;
+  background-color: rgb(252, 159, 159);
+}

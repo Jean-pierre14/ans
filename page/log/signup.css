@@ -1,0 +1,156 @@
+*{
+  list-style: none;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  font-family: "segoe ui";
+}
+.main{
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0px;
+  margin: 0px;
+}
+.sign1{
+  position: relative;
+  width: 700px;
+  height: 800px;
+  padding: 10px 80px;
+}
+.sign2{
+  position: relative;
+  width: 50%;
+  height: 300px;
+  top: 0px;
+  right: 0px;
+}
+.social1{
+  background-color: #60B5F0;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.social2{
+  background-color: #868CA0;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.social3{
+  background-color: #4464A2;
+  border-radius: 5px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+.label5{
+  display: inline;
+ /* height: 50px;*/
+  line-height: 50px;
+  padding-left: 10px;
+}
+.sociallogo{
+  float: left;
+  margin: 10px;
+}
+.social1:hover{
+  background-color: #50A4E0;
+}
+.social2:hover{
+  background-color: #757B90;
+}
+.social3:hover{
+  background-color: #335391;
+}
+.or{
+  color: #696F79;
+  font-size: 20px;
+}
+.withemail{
+  background-color: #444857;
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+  line-height: 50px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.withemail:hover{
+  background-color: #444846;
+}
+.label1{
+  color: #696F79;
+  font-size: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.textbox{
+  border: none;
+  height: 50px;
+  width: 350PX;
+  border-radius: 5px;
+  background-color: #D5D7DE;
+  padding-left: 20px;
+  color: black;
+}
+.label2{
+  color: #696F79;
+}
+input[type=submit]{
+  margin-top: 30px;
+  display: block;
+  background-color: #47CF73;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 5px;
+  height: 60px;
+  width: 250px;
+}
+.sign2{
+  border-left: 10px solid #868CA0;
+  background-color: #3a5a77;
+  position: absolute;
+  width: 380px;
+  left: 860px;
+  height: 700px;
+  right: 0px;
+  padding: 50px 50px;
+}
+.label6{
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #868CA0;
+}
+.group1{
+  margin-top: 10px;
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+.label7{
+  color: #868CA0;
+  font-size: 16px;
+  text-align: left;
+}
+.label8{
+  color: #868CA0;
+  font-size: 16px;
+  text-align: right;
+}
+.label9{
+  padding: 10px 80px;
+  background-color: #F9E9A2;
+  border-radius: 5px;
+  color: black;
+  margin-top: 10px;
+}
+.label9 a{
+  color: #619593;
+  text-decoration: underline;
+}

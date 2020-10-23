@@ -1,62 +1,66 @@
 <?php 
 include '../_header.php';
 
-if ($_SESSION['user']==array()) {
-	header("location:../log/login.php");
-}
-if ($_SESSION['business']==array()) {
-	header("location:../log/login.php");
-}
+if(!isset($_SESSION['role']) or ($_SESSION['role']!=3))
+	{
+		header('location: ../login.php');
+		exit();
+	}
 // var_dump($_SESSION['user']['id']);
 
   ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="vieuport" content="width=device-width, initiate-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	
-		<!--font awesame-->
+    <meta charset="utf-8">
+    <meta name="vieuport" content="width=device-width, initiate-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-	 integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!--font awesame-->
 
-		<!--customer styling-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!--customer styling-->
 
     <link rel="stylesheet" href="../../my_css/blog_style.css">
-    
-    		<!--customer Admin styling-->
 
-	<link rel="stylesheet" href="../../my_css/admin.css">
+    <!--customer Admin styling-->
 
-	<!--google font-->
-	<link href="https://fonts.googleapis.com/css?family=Candal|Lora&display=swap" rel="stylesheet">
-	
-	<title>Admin Section - Add post</title>
+    <link rel="stylesheet" href="../../my_css/admin.css">
+    <link rel="stylesheet" href="../../sniper.css">
+    <!--font awesame-->
+    <!-- <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css"> -->
+
+    <!--google font-->
+    <link href="https://fonts.googleapis.com/css?family=Candal|Lora&display=swap" rel="stylesheet">
+
+    <title>Admin Section - Add post</title>
 </head>
-<body>
-	<header>
-		<div class="logo">
-			<h1 class="logo-text"><span>African</span>Next Season</h1>
-		</div>
-		<i class="fa fa-bars menu-toggle"></i>
-		<ul class="nav">
-			<li>
-				<a href="#">
-					<i class="fa fa-user"></i>
-					 <?= $_SESSION['business']['bname'] ?>
-					 <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
-					</a>
-			</li>
-			<li><a href="../log/logout.php" class="logout">Logout</a></li>
-		</ul>
-	</header>
 
-	<!-- Admin pade Wrapper -->
-	<div class="admin-wrapper">
-		<!-- Left sidebar -->
-	<!-- 	<div class="left-sidebar">
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text"><span>African</span>Next Season</h1>
+        </div>
+        <i class="fa fa-bars menu-toggle"></i>
+        <ul class="nav">
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <?= $_SESSION['fname'] ?>
+                    <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+                </a>
+            </li>
+            <li><a href="../log/logout.php" class="logout">Logout</a></li>
+        </ul>
+    </header>
+
+    <!-- Admin pade Wrapper -->
+    <div class="admin-wrapper">
+        <!-- Left sidebar -->
+        <!-- 	<div class="left-sidebar">
 			<ul>
 				<li><a href="index_post.php">Manage posts</a></li>
 				<li><a href="../users/index_user.php">Manage users</a></li>
@@ -64,17 +68,17 @@ if ($_SESSION['business']==array()) {
 			</ul>
 		</div> -->
 
-		<!-- // Left sidebar -->
-		
-		<!-- Admin content -->
-		<div class="admin-content">
-			<div class="button-group">
-				<a href="index.php" class="btn btn-big">Home Page</a> 
-				<!-- <a href="index_post.php" class="btn btn-big">Manage posts</a> -->
-			</div>
-			<div class="content">
-				<h2 class="page-title">Add Posts</h2>
-               <form action="addtrait.php" method="post" enctype="multipart/form-data" >
+        <!-- // Left sidebar -->
+
+        <!-- Admin content -->
+        <div class="admin-content">
+            <div class="button-group">
+                <a href="index.php" class="btn btn-big">Home Page</a>
+                <!-- <a href="index_post.php" class="btn btn-big">Manage posts</a> -->
+            </div>
+            <div class="content">
+                <h2 class="page-title">Add Posts</h2>
+                <form action="addtrait.php" method="post" enctype="multipart/form-data">
                     <div>
                         <label>Title</label>
                         <input type="text" name="titre" class="text-input">
@@ -84,51 +88,52 @@ if ($_SESSION['business']==array()) {
                         <label class="bl">Body</label>
 
                         <textarea name="contenue" class="bl" cols="100" rows="10">
-                        	
+
                         </textarea>
                     </div>
-					<div>
-						<label>Image</label>
-						<input type="file" name="img" class="text-input" accept="image/*" multiple/>
-					</div>
                     <div>
-                   <!--      <label>topic</label>
+                        <label>Image</label>
+                        <input type="file" name="img" class="text-input" accept="image/*" multiple />
+                    </div>
+                    <div>
+                        <!--      <label>topic</label>
                         <select name="topic" class="text-input">
                         <option value="Poetry">Poetry</option>
                         <option value="Life Lessons">Life Lessons</option>
                     </select> -->
-                    </div>  
+                    </div>
 
                     <div class="button-group">
                         <button type="submit" class="btn btn-big">Add post</button>
                     </div>
 
                 </form>
-		
-	
-			</div>
-		</div>
-
-		<!-- // Admin content -->
-	</div>
 
 
-		<!-- // page wrapper -->
+            </div>
+        </div>
 
-		
+        <!-- // Admin content -->
+    </div>
 
-	<!--jQuery-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-	</script>
+
+    <!-- // page wrapper -->
+
+
+
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
 
     <!--ckedtor-->
 
-	<script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>  
+    <script src="https://cdn.ckeditor.com/ckeditor5/17.0.0/classic/ckeditor.js"></script>
 
-	<!--Customer script-->
-	<script src="../../js/scripts.js">
+    <!--Customer script-->
+    <script src="../../js/scripts.js">
 
-	</script>
+    </script>
 </body>
-  
+
 </html>

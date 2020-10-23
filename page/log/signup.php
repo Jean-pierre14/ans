@@ -1,162 +1,69 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>create an acount</title>
-    <link rel="shortcut icon" type="imege/x-icon" href="../../img/1587195324100.png">
-    <link rel="stylesheet" href="signup.css">
-    <script>
-    function cansubmit() {
-      const email  = document.form1.email.value;
-      const password = document.form1.password.value;
-      const passwordconf=document.form1.passwordconf.value;
-      if(email.indexOf("@")==-1){
-        alert("@ is missing in your Email, please check your email again");
-        return false;
-      }
-      else if (email.indexOf(".")==-1) {
-        alert("Dot is missing in your Email, please check your email again");
-        return false;
-      }
-      else if(password.length < 6 ){
-        alert("Password Length should be more than 6 characters");
-        return false;
-      }
-      else if(passwordconf !== password){
-        alert("the two passwords are different, try the same password");
+<html lang="en">
 
-          return false;
-      }
-    
-      return true;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ans</title>
+    <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./sniper.css">
+    <script src="../../bootstrap/jquery.min.js"></script>
+    <script src="../../bootstrap/bootstrap.min.js"></script>
+    <script src="../../bootstrap/popper.min.js"></script>
+</head>
 
-    </script>
-  </head>
-  <body>
-    <form name="form1" onsubmit="return cansubmit()" action="traitsing.php" method="post">
-      <div class="main">
-        <div class="sign1">
-          <a href="#">
-
-          <div class="label1">
-            YOUR FIRST NAME
-          </div>
-          <input class="textbox" required type="text" name="fname" placeholder="FIRST NAME">
-           <div class="label1">
-            YOUR LAST NAME
-          </div>
-          <input class="textbox" required type="text" name="lname" placeholder="LAST NAME" >
-          <div class="label1">
-            CHOOSE A USERNAME
-          </div>
-          <input class="textbox" required type="text" name="username" placeholder="USERNAME">
-          <div class="label2">
-          </div>
-          <div class="label1">
-            EMAIL
-          </div>
-          <input class="textbox" required type="email" name="email" placeholder="exemple@gmail.com">
-           <div class="label1">
-            PHONE NUMBER
-          </div>
-          <input class="textbox" required type="text" name="phone" placeholder="ex:+24397XXXXXXX ">
-          <div class="label1">
-            CHOOSE A PASSWORD
-          </div>
-          <input class="textbox" required type="password" name="password" placeholder="PASSWORD">
-            <div class="label1">
-            CONFIRM YOUR PASSWORD
-          </div>
-          <input class="textbox" required type="password" name="passwordconf" placeholder="CONFIRM YOUR PASSWORD">
-
-          <input type="submit" name="submit" value="REGISTER">
+<body class="bg-img-volcan">
+    <div class="container-fluid py-2 bg-black-op" style="min-height: 100vh;">
+        <div class="row justify-content-center">
+            <div class="col-md-3 col-sm 12 p-2 mt-2">
+                <h3 class="text-center">Sign Up</h3>
+                <div class="card card-body">
+                    <?php
+                        include("./codes.php");
+                        include("./error.php");
+                    ?>
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <label for="fname">First name</label>
+                            <input type="text" name="fname" value="<?php print $fname;?>" id="fname"
+                                placeholder="First name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="lname">Last name</label>
+                            <input type="text" name="lname" id="lname" value="<?php print $lname;?>"
+                                placeholder="Last name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" value="<?php print $username;?>" id="username"
+                                placeholder="Username or email" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" value="<?php print $email;?>"
+                                placeholder="Email@ulk.rw" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" value="<?php print $password;?>" id="password"
+                                placeholder="Password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="password2">Confirm Password</label>
+                            <input type="password" name="password2" id="password2" value="<?php print $password2;?>"
+                                placeholder="Confirm Password" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" name="register" class="btn btn-success bt-block">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card card-body mt-3">
+                    <span class="text-center">I have a <a href="login.php">account</a></span>
+                </div>
+            </div>
         </div>
-        <div class="sign2">
-          <div class="label6">
-            The advantages of our partnership
-          </div>
-          <table class="group1">
-            <tr>
-              <td class="label7">Open and close the availability of your establishment when you want.</td>
-              <td class="label8"></td>
-            </tr>
-            <tr>
-              <td class="label7">you are the administrator of your platform on our site,
-                it is you who decides to change or modify
-                your business.</td>
-              <td class="label8"></td>
-            </tr>
-            <tr>
-              <td class="label7"></td>
-              <td class="label8"></td>
-            </tr>
-            <tr>
-              <td class="label7"></td>
-              <td class="label8"></td>
-            </tr>
-          </table>
-          <div class="label6">
-            This is how we help you to get clients.
-          </div>
-          <table class="group1">
-            <tr>
-              <td class="label7">Many travelers start by looking at search engines like GOOLE
-                That's why we don't wait for customers to come to us. We actively promote your establishment on search engines all over the world.</td>
-              <td class="label8"></td>
-            </tr>
-            <tr>
-              <td class="label7">
-                Some travelers use maps when searching,
-                When you register your establishment on ans.com, it is also listed on Google Maps.</td>
-              <td class="label8"></td>
-            </tr>
-            <tr>
-              <td class="label7"></td>
-              <td class="label8"></td>
-            </tr>
-            <tr>
-              <td class="label7"></td>
-              <td class="label8"></td>
-            </tr>
-          </table>
-          <div class="label6">
-            Register and welcome your first customers today
-          </div>
-          <table class="group1">
-            <tr>
-              <td class="label7"></td>
-              <td class="label8"></td>
-            </tr>
-            <tr>
-              <td class="label7"></td>
-              <td class="label8"></td>
-            </tr>
-            <tr>
-              <td class="label7"></td>
-              <td class="label8"></td>
-            </tr>
-          </table>
-       <!--  <div class="label6">
-            ASSET HOSTING
-          </div>
-          <table class="group1">
-            <tr>
-              <td class="label7">Storage</td>
-              <td class="label8"></td>
-            </tr>
-          </table>
-          <div class="label6">
-            NEED MORE?
-          </div>
-          <div class="label9">
-            Unlock the full power of MAPS <a href="#">with our PRO plans.</a>
-          </div>
-          -->
-        </div>
+    </div>
+</body>
 
-      </div>
-    </form>
-
-  </body>
 </html>

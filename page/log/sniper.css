@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.bg-img-chukudu{
+    background-image: url(../../img/chikudu.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.bg-img-volcan{
+    background-image: url(../../img/images_.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.bg-black-op{
+    position: relative;
+    background-color: rgba(0,0,0,0.4);
+}

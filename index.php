@@ -27,8 +27,6 @@
 </head>
 
 <body>
-
-
     <div id="home" class="hero-area">
         <div class="bg-image bg-parallax overlay"
             style="background-image:url(./img/images_.jpeg);background-position:bottom;">

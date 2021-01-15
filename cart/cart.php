@@ -59,68 +59,39 @@ else{
         <!-- Post Slider -->
         <div class="post-slider">
             <h1 class="slider-title">North Kivu <?php echo $_GET['cat']; ?></h1>
-
-
-            
-
             <i class="fa fa-chevron-left prev"></i>
             <i class="fa fa-chevron-right next"></i>
-        
-        
-        
-        
             <div class="post-wrapper">
-   <?php   $bus=$DB->query('SELECT * FROM business INNER JOIN news
-    ON business.id=news.id_business 
-
-    WHERE business_type=:cat',array(
-                'cat'=>$cat
-
-
-            ));   ?>
-
-                <?php  
-                // if (!$bus) {
-                //     header("location:index.php");
-                // }
-
-
-                foreach($bus as $bs): ?>
-
-                <div class="post">
-
-        
-
-                <img src="../page/images/<?= $bs->url_img;?>" alt="" class="slider-image">
-                <div class="post-info">
-                    <h4><a href="single.php?tok=<?= $bs->id_n?>"><span class="sp"><?= $bs->titre;?></span></a></h4>
-                    <i class="fa fa-user"><span class="sp"><?= $bs->business_name;?></span> </i>
-                    &nbsp;
-                    <i class="fa fa-calendar"><span class="sp"><?= $bs->datepost ?></span></i>
-                    <p>
-                        <a href="single.php?tok=<?= $bs->id_n?>" class="btn read-more">Read More</a>
-                    </p>
+               <?php   $bus=$DB->query('SELECT * FROM business INNER JOIN news
+                ON business.id=news.id_business 
+                WHERE business_type=:cat',array(
+                            'cat'=>$cat
+                        ));   ?>
+                    <?php  
+                    // if (!$bus) {
+                    //     header("location:index.php");
+                    // }
+                    foreach($bus as $bs): ?>
+                    <div class="post">
+                    <img src="../page/images/<?= $bs->url_img;?>" alt="" class="slider-image">
+                    <div class="post-info">
+                        <h4><a href="single.php?tok=<?= $bs->id_n?>"><span class="sp"><?= $bs->titre;?></span></a></h4>
+                        <i class="fa fa-user"><span class="sp"><?= $bs->business_name;?></span> </i>
+                        &nbsp;
+                        <i class="fa fa-calendar"><span class="sp"><?= $bs->datepost ?></span></i>
+                        <p>
+                            <a href="single.php?tok=<?= $bs->id_n?>" class="btn read-more">Read More</a>
+                        </p>
+                    </div>
+                <!-- <div class="post">2</div>
+                    <div class="post">3</div>
+                    <div class="post">4</div>
+                    <div class="post">5</div> -->
                 </div>
-            <!-- <div class="post">2</div>
-                <div class="post">3</div>
-                <div class="post">4</div>
-                <div class="post">5</div> -->
-            
-
-
-            </div>
-      <?php  endforeach;?>
-            
+          <?php  endforeach;?>
         </div>
-        
-                    
-    
-
         </div>
-
-	
-		<div>
-			
+	<div>
     <section class="hotel-rooms spad-2">
         <div class="container">
             <?php   $bus=$DB->query('SELECT * FROM business WHERE business_type=:cat',array(
